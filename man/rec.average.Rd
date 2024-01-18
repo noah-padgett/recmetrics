@@ -19,6 +19,9 @@ The average of the absolute values of the C-REC matrix entries (this is
 essentially how much relative excess correlation there is still to distribute
 across groupings)
 }
+\details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+}
 \examples{
 {
   # Use the SCWB data example

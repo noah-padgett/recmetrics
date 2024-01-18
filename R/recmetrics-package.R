@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom lifecycle deprecated
 #' @importFrom magrittr %>%
 #' @importFrom stats cor
 #' @importFrom stats cov

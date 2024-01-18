@@ -18,6 +18,9 @@ A numeric matrix of correlations among variable residuals.
 Compute relative excess correlation (REC) matrix among variables in supplied
 data.
 }
+\details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+}
 \examples{
 {
   # Use the SCWB data example

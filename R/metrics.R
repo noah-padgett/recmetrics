@@ -4,6 +4,8 @@
 #' essentially how much relative excess correlation there is still to distribute
 #' across groupings)
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param data A data.frame or tibble  (required)
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
@@ -34,6 +36,8 @@ rec.average <- function(data, na.rm = TRUE) {
 #' given domain, it is basically the average of the REC entries within the domain
 #' vs. the average of the REC entries for all of the other entries in the column
 #' of that domain). We might call this the REC domain coherence for domain i
+#'
+#' `r lifecycle::badge('experimental')`
 #'
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the
@@ -113,6 +117,8 @@ rec.avg.wb.domains <-
 #' gives a measure of the coherence of the partition formed by the various
 #' domains as a whole
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the
 #'  columns for each domain (required)
@@ -189,6 +195,8 @@ rec.coherence <-
 #' score for that indicator with the other indicators in domain i. This will
 #' allow one in some sense to see if certain indicators seem to have higher REC
 #' scores in a domain other than to the other in which they were assigned
+#'
+#' `r lifecycle::badge('experimental')`
 #'
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the

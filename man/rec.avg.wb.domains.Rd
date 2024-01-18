@@ -29,6 +29,9 @@ given domain, it is basically the average of the REC entries within the domain
 vs. the average of the REC entries for all of the other entries in the column
 of that domain). We might call this the REC domain coherence for domain i
 }
+\details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+}
 \examples{
 {
   # Use the SCWB data example

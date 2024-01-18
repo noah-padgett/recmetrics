@@ -27,6 +27,9 @@ equal the average within-domain REC vs. the average cross-domain REC); this
 gives a measure of the coherence of the partition formed by the various
 domains as a whole
 }
+\details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+}
 \examples{
 {
   # Use the SCWB data example

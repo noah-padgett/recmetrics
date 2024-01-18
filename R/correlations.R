@@ -3,6 +3,8 @@
 #' Compute observed residual correlation (ORC) matrix among observed residuals
 #' for variables supplied data.
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param data A data.frame or tibble
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
@@ -32,6 +34,8 @@ cor.orc <- function(data, na.rm = TRUE) {
 #'
 #' Compute relative excess correlation (REC) matrix among variables in supplied
 #' data.
+#'
+#' `r lifecycle::badge('experimental')`
 #'
 #' @param data A data.frame or tibble
 #' @param na.rm logical (defaults to TRUE)

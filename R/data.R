@@ -9,31 +9,31 @@
 #' @usage data(SCWB)
 #' @format ## `SCWB` A data frame with 501 observations of 25 variables.
 #' \describe{
-#'   \item{\code{cwbcloserel}}{}
-#'   \item{\code{cwbrespect}}{}
-#'   \item{\code{cwbtrust}}{}
-#'   \item{\code{cwbmutuality}}{}
-#'   \item{\code{cwbbeneficence}}{}
-#'   \item{\code{cwbintegrity}}{}
-#'   \item{\code{cwbcompetence}}{}
-#'   \item{\code{cwbvision}}{}
-#'   \item{\code{cwbrelgrowth}}{}
-#'   \item{\code{cwbfairness}}{}
-#'   \item{\code{cwbsustenance}}{}
-#'   \item{\code{cwbachieve}}{}
-#'   \item{\code{cwbsatisf}}{}
-#'   \item{\code{cwbvalue}}{}
-#'   \item{\code{cwbbelonging}}{}
-#'   \item{\code{cwbwelcome}}{}
-#'   \item{\code{cwbpurpose}}{}
-#'   \item{\code{cwbcontrib}}{}
-#'   \item{\code{cwbinterconn}}{}
-#'   \item{\code{cwbsynergy}}{}
-#'   \item{\code{total_goodrel}}{Mean of items cwbcloserel, cwbrespect, cwbtrust, cwbmutuality}
-#'   \item{\code{total_prolead}}{Mean of items cwbbeneficence, cwbintegrity, cwbcompetence, cwbvision}
-#'   \item{\code{total_healthyprac}}{Mean of items cwbrelgrowth, cwbfairness, cwbsustenance, cwbachieve}
-#'   \item{\code{total_satcomm}}{Mean of items cwbsatisf, cwbvalue, cwbbelonging, cwbwelcome}
-#'   \item{\code{total_strongmiss}}{Mean of items cwbpurpose, cwbcontrib, cwbintercon, cwbsynergy}
+#'   \item{`cwbcloserel`}{}
+#'   \item{`cwbrespect`}{}
+#'   \item{`cwbtrust`}{}
+#'   \item{`cwbmutuality`}{}
+#'   \item{`cwbbeneficence`}{}
+#'   \item{`cwbintegrity`}{}
+#'   \item{`cwbcompetence`}{}
+#'   \item{`cwbvision`}{}
+#'   \item{`cwbrelgrowth`}{}
+#'   \item{`cwbfairness`}{}
+#'   \item{`cwbsustenance`}{}
+#'   \item{`cwbachieve`}{}
+#'   \item{`cwbsatisf`}{}
+#'   \item{`cwbvalue`}{}
+#'   \item{`cwbbelonging`}{}
+#'   \item{`cwbwelcome`}{}
+#'   \item{`cwbpurpose`}{}
+#'   \item{`cwbcontrib`}{}
+#'   \item{`cwbinterconn`}{}
+#'   \item{`cwbsynergy`}{}
+#'   \item{`total_goodrel`}{Mean of items cwbcloserel, cwbrespect, cwbtrust, cwbmutuality}
+#'   \item{`total_prolead`}{Mean of items cwbbeneficence, cwbintegrity, cwbcompetence, cwbvision}
+#'   \item{`total_healthyprac`}{Mean of items cwbrelgrowth, cwbfairness, cwbsustenance, cwbachieve}
+#'   \item{`total_satcomm`}{Mean of items cwbsatisf, cwbvalue, cwbbelonging, cwbwelcome}
+#'   \item{`total_strongmiss`}{Mean of items cwbpurpose, cwbcontrib, cwbintercon, cwbsynergy}
 #' }
 #' @source Data used in Padgett et al. (in press).
 #' @references Padgett, R.N., ...

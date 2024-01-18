@@ -5,33 +5,35 @@
 \alias{SCWB}
 \title{Subjective Community Well-Being Dataset (25 Variables)}
 \format{
-## `SCWB` A data frame with 501 observations of 25 variables.
+\subsection{\code{SCWB} A data frame with 501 observations of 25 variables.}{
+
 \describe{
-  \item{\code{cwbcloserel}}{}
-  \item{\code{cwbrespect}}{}
-  \item{\code{cwbtrust}}{}
-  \item{\code{cwbmutuality}}{}
-  \item{\code{cwbbeneficence}}{}
-  \item{\code{cwbintegrity}}{}
-  \item{\code{cwbcompetence}}{}
-  \item{\code{cwbvision}}{}
-  \item{\code{cwbrelgrowth}}{}
-  \item{\code{cwbfairness}}{}
-  \item{\code{cwbsustenance}}{}
-  \item{\code{cwbachieve}}{}
-  \item{\code{cwbsatisf}}{}
-  \item{\code{cwbvalue}}{}
-  \item{\code{cwbbelonging}}{}
-  \item{\code{cwbwelcome}}{}
-  \item{\code{cwbpurpose}}{}
-  \item{\code{cwbcontrib}}{}
-  \item{\code{cwbinterconn}}{}
-  \item{\code{cwbsynergy}}{}
-  \item{\code{total_goodrel}}{Mean of items cwbcloserel, cwbrespect, cwbtrust, cwbmutuality}
-  \item{\code{total_prolead}}{Mean of items cwbbeneficence, cwbintegrity, cwbcompetence, cwbvision}
-  \item{\code{total_healthyprac}}{Mean of items cwbrelgrowth, cwbfairness, cwbsustenance, cwbachieve}
-  \item{\code{total_satcomm}}{Mean of items cwbsatisf, cwbvalue, cwbbelonging, cwbwelcome}
-  \item{\code{total_strongmiss}}{Mean of items cwbpurpose, cwbcontrib, cwbintercon, cwbsynergy}
+\item{\code{cwbcloserel}}{}
+\item{\code{cwbrespect}}{}
+\item{\code{cwbtrust}}{}
+\item{\code{cwbmutuality}}{}
+\item{\code{cwbbeneficence}}{}
+\item{\code{cwbintegrity}}{}
+\item{\code{cwbcompetence}}{}
+\item{\code{cwbvision}}{}
+\item{\code{cwbrelgrowth}}{}
+\item{\code{cwbfairness}}{}
+\item{\code{cwbsustenance}}{}
+\item{\code{cwbachieve}}{}
+\item{\code{cwbsatisf}}{}
+\item{\code{cwbvalue}}{}
+\item{\code{cwbbelonging}}{}
+\item{\code{cwbwelcome}}{}
+\item{\code{cwbpurpose}}{}
+\item{\code{cwbcontrib}}{}
+\item{\code{cwbinterconn}}{}
+\item{\code{cwbsynergy}}{}
+\item{\code{total_goodrel}}{Mean of items cwbcloserel, cwbrespect, cwbtrust, cwbmutuality}
+\item{\code{total_prolead}}{Mean of items cwbbeneficence, cwbintegrity, cwbcompetence, cwbvision}
+\item{\code{total_healthyprac}}{Mean of items cwbrelgrowth, cwbfairness, cwbsustenance, cwbachieve}
+\item{\code{total_satcomm}}{Mean of items cwbsatisf, cwbvalue, cwbbelonging, cwbwelcome}
+\item{\code{total_strongmiss}}{Mean of items cwbpurpose, cwbcontrib, cwbintercon, cwbsynergy}
+}
 }
 }
 \source{

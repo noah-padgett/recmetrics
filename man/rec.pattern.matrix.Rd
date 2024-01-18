@@ -36,6 +36,9 @@ score for that indicator with the other indicators in domain i. This will
 allow one in some sense to see if certain indicators seem to have higher REC
 scores in a domain other than to the other in which they were assigned
 }
+\details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+}
 \examples{
 {
   # Use the SCWB data example
