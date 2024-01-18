@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# recmetrics
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of recmetrics is to provide users with the ability to conduct psychometric evaluation without relying on assumptions of the latent variable structure following the work of VanderWeele and Padgett (preprint).
+
+## Installation
+
+You can install the development version of recmetrics from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("noah-padgett/recmetrics")
+```
+
+## Example
+
+This is a basic example which shows you how to provide an evaluation of the interval structure of a set of items on a survey similar to confirmatory factor analysis.
+Using the *a prior* groups of items on each domain, we can construct a pattern matrix of the relative excess correlations.
+
+```{r example}
+library(recmetrics)
+
+# Use the SCWB data example
+domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
+domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
+domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
+domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
+domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
+mylist <- list(
+  domain_goodrel,
+  domain_prolead,
+  domain_healthyprac,
+  domain_satcomm,
+  domain_strongmiss
+)
+rec.pattern.matrix(SCWB, mylist)
+
+```
+
+

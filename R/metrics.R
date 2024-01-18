@@ -221,7 +221,7 @@ rec.coherence <-
 #'     domain_satcomm,
 #'     domain_strongmiss
 #'   )
-#'   rec.coherence(SCWB, mylist)
+#'   rec.pattern.matrix(SCWB, mylist)
 #' }
 #' @export
 rec.pattern.matrix <-
@@ -241,13 +241,11 @@ rec.pattern.matrix <-
       select(all_of(keep.var))
 
     if (is.null(domainnames)) {
-      domainnames <- paste("Domain", 1:length(domainlist))
+      domainnames <- paste0("Domain", 1:length(domainlist))
     }
     if (is.null(labels)) {
       labels <- keep.var
     }
-
-    temp.data <- append_observed_residuals(temp.data, na.rm = na.rm)
 
     # get REC
     Qij.star <- cor.rec(temp.data, na.rm = na.rm)

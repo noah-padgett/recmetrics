@@ -54,6 +54,6 @@ scores in a domain other than to the other in which they were assigned
     domain_satcomm,
     domain_strongmiss
   )
-  rec.coherence(SCWB, mylist)
+  rec.pattern.matrix(SCWB, mylist)
 }
 }
