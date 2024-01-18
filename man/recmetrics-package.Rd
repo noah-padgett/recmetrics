@@ -8,6 +8,13 @@
 \description{
 recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://noah-padgett.github.io/recmetrics/}
+}
+
+}
 \author{
 \strong{Maintainer}: R. Noah Padgett \email{npadgett@hsph.harvard.edu} (\href{https://orcid.org/0000-0002-9114-3896}{ORCID}) [copyright holder]
 
