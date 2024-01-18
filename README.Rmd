@@ -22,6 +22,10 @@ The goal of recmetrics is to provide users with the ability to conduct psychomet
 
 ## Installation
 
+``` r
+install.packages("recmetrics")
+```
+
 You can install the development version of recmetrics from [GitHub](https://github.com/) with:
 
 ``` r

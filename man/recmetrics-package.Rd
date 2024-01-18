@@ -9,7 +9,7 @@
 More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
 }
 \author{
-\strong{Maintainer}: R. Noah Padgett \email{npadgett@hsph.harvard.edu} (\href{https://orcid.org/0000-0002-9114-3896}{ORCID})
+\strong{Maintainer}: R. Noah Padgett \email{npadgett@hsph.harvard.edu} (\href{https://orcid.org/0000-0002-9114-3896}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

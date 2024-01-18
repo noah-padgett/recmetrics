@@ -13,6 +13,10 @@ variable structure following the work of VanderWeele and Padgett
 
 ## Installation
 
+``` r
+install.packages("recmetrics")
+```
+
 You can install the development version of recmetrics from
 [GitHub](https://github.com/) with:
 
