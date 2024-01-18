@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{append_observed_residuals}
 \alias{append_observed_residuals}
-\title{Observed Residual Correlations}
+\title{Append Observed Correlations to Data}
 \usage{
 append_observed_residuals(data, na.rm = T)
 }
@@ -15,13 +15,13 @@ append_observed_residuals(data, na.rm = T)
 A numeric matrix of correlations among variable residuals.
 }
 \description{
-Compute observed residual correlation (ORC) matrix among observed residuals
-for variables supplied data.
+Compute observed residuals for each variables in data and appends these newly
+created variables to the original dataset.
 }
 \examples{
 {
-# Use the SCWB data example
-data(SCWB)
-append_observed_residuals(SCWB[,1:20])
+  # Use the SCWB data example
+  data(SCWB)
+  append_observed_residuals(SCWB[, 1:20])
 }
 }

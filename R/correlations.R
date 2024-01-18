@@ -7,20 +7,20 @@
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
 #' @examples {
-#' # Use the SCWB data example
-#' data(SCWB)
-#' cor.orc(SCWB[,1:20])
+#'   # Use the SCWB data example
+#'   data(SCWB)
+#'   cor.orc(SCWB[, 1:20])
 #' }
 #' @import dplyr tidyselect
 #' @export
-cor.orc <- function(data, na.rm=T){
+cor.orc <- function(data, na.rm = TRUE) {
   temp.data <- data
-  temp.data <- append_observed_residuals(temp.data, na.rm=na.rm)
+  temp.data <- append_observed_residuals(temp.data, na.rm = na.rm)
 
-  #compute correlations of residuals
+  # compute correlations of residuals
   Qij <- temp.data %>%
     select(contains("resid_")) %>%
-    cor(use="pairwise.complete.obs")
+    cor(use = "pairwise.complete.obs")
   rownames(Qij) <- colnames(Qij) <- colnames(data)
 
   Qij
@@ -37,29 +37,30 @@ cor.orc <- function(data, na.rm=T){
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
 #' @examples {
-#' # Use the SCWB data example
-#' data(SCWB)
-#' cor.rec(SCWB[,1:20])
+#'   # Use the SCWB data example
+#'   data(SCWB)
+#'   cor.rec(SCWB[, 1:20])
 #' }
-cor.rec <- function(data, na.rm=T){
+#' @export
+cor.rec <- function(data, na.rm = TRUE) {
   temp.data <- data
-  temp.data <- append_observed_residuals(temp.data, na.rm=na.rm)
+  temp.data <- append_observed_residuals(temp.data, na.rm = na.rm)
 
   # observed correlations
-  Cij <- temp.dat %>%
+  Cij <- temp.data %>%
     select(!contains("resid_")) %>%
-    cor(use="pairwise.complete.obs")
+    cor(use = "pairwise.complete.obs")
   rownames(Cij) <- colnames(Cij) <- colnames(data)
 
   # compute relative excess correlation
   diag(Cij) <- NA
-  rho.i <- rowMeans(Cij, na.rm = T)
-  rho.. <- mean(Cij, na.rm=T)
-  Qij.star <- matrix(nrow=ncol(Cij),ncol=ncol(Cij))
-  for(i in 1:ncol(Cij)){
-    for(j in 1:ncol(Cij)){
-      if(i != j){
-        Qij.star[i,j] = (Cij[i,j] - rho..) - ((rho.i[i]-rho..)+(rho.i[j]-rho..))
+  rho.i <- rowMeans(Cij, na.rm = TRUE)
+  rho.. <- mean(Cij, na.rm = TRUE)
+  Qij.star <- matrix(nrow = ncol(Cij), ncol = ncol(Cij))
+  for (i in 1:ncol(Cij)) {
+    for (j in 1:ncol(Cij)) {
+      if (i != j) {
+        Qij.star[i, j] <- (Cij[i, j] - rho..) - ((rho.i[i] - rho..) + (rho.i[j] - rho..))
       }
     }
   }
@@ -67,5 +68,3 @@ cor.rec <- function(data, na.rm=T){
 
   Qij.star
 }
-
-

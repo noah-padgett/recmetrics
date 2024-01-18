@@ -5,5 +5,6 @@
 #' @importFrom magrittr %>%
 #' @importFrom stats cor
 #' @importFrom stats cov
+#' @importFrom stats na.omit
 ## usethis namespace: end
 NULL
