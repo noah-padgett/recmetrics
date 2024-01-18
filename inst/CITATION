@@ -1,11 +1,7 @@
 bibentry(
-  bibtype  = "Article",
-  title    = "Relative excess correlations and other stuff.",
+  bibtype  = "MISC",
+  title    = "Novel Psychometric Indicator Assessments: The Relative Excess Correlation and Associated Matrices",
   author   = "VanderWeele, T.J. and Padgett, R.N.",
   journal  = "ArXiv",
-  year     = "2023",
-  volume   = "0",
-  number   = "0",
-  pages    = "0",
-  doi      = "0"
+  year     = "2023"
 )

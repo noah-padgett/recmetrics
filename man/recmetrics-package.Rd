@@ -6,7 +6,7 @@
 \alias{recmetrics-package}
 \title{recmetrics: Psychometric Evaluation Using Relative Excess Correlations}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.
 }
 \author{
 \strong{Maintainer}: R. Noah Padgett \email{npadgett@hsph.harvard.edu} (\href{https://orcid.org/0000-0002-9114-3896}{ORCID}) [copyright holder]
