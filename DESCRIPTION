@@ -1,7 +1,7 @@
 Type: Package
 Package: recmetrics
 Title: Psychometric Evaluation Using Relative Excess Correlations
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: 
     person("R. Noah", "Padgett", , "npadgett@hsph.harvard.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9114-3896"))
