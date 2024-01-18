@@ -3,7 +3,7 @@ Package: recmetrics
 Title: Psychometric Evaluation Using Relative Excess Correlations
 Version: 0.1.0
 Authors@R: 
-    person("R. Noah", "Padgett", , "npadgett@hsph.harvard.edu", role = c("aut", "cre"),
+    person("R. Noah", "Padgett", , "npadgett@hsph.harvard.edu", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-9114-3896"))
 Description: More about what it does (maybe more than one line) Use four
     spaces when indenting paragraphs within the Description.
