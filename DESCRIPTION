@@ -5,8 +5,7 @@ Version: 0.1.0
 Authors@R: 
     person("R. Noah", "Padgett", , "npadgett@hsph.harvard.edu", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-9114-3896"))
-Description: More about what it does (maybe more than one line) Use four
-    spaces when indenting paragraphs within the Description.
+Description: recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.
 License: MIT + file LICENSE
 Depends: 
     R (>= 2.10)
