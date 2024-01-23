@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.">
+<meta name="description" content="Modern results of psychometric theory are implementedto provide users with a way of evaluating the internal structure of a set of items guided by theory. These methods are discussed in detail in VanderWeele and Padgett &lt;arxiv:&gt; The positive deviations of the REC matrix entries from zero help identify clusters of indicators that are more strongly related to one another, providing insights somewhat analogous to factor analysis, but without the need for rotations or decisions concerning the number of factors. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures. ">
 <title>Psychometric Evaluation Using Relative Excess Correlations • recmetrics</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Psychometric Evaluation Using Relative Excess Correlations">
-<meta property="og:description" content="recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.">
+<meta property="og:description" content="Modern results of psychometric theory are implementedto provide users with a way of evaluating the internal structure of a set of items guided by theory. These methods are discussed in detail in VanderWeele and Padgett &lt;arxiv:&gt; The positive deviations of the REC matrix entries from zero help identify clusters of indicators that are more strongly related to one another, providing insights somewhat analogous to factor analysis, but without the need for rotations or decisions concerning the number of factors. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures. ">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -62,8 +62,10 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of recmetrics from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"recmetrics"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install the development version of recmetrics from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"noah-padgett/recmetrics"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -71,65 +73,226 @@
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>This is a basic example which shows you how to provide an evaluation of the interval structure of a set of items on a survey similar to confirmatory factor analysis. Using the <em>a prior</em> groups of items on each domain, we can construct a pattern matrix of the relative excess correlations.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://noah-padgett.github.io/recmetrics/">recmetrics</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Use the SCWB data example</span></span>
-<span><span class="va">domain_goodrel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbcloserel"</span>, <span class="st">"cwbrespect"</span>, <span class="st">"cwbtrust"</span>, <span class="st">"cwbmutuality"</span><span class="op">)</span></span>
-<span><span class="va">domain_prolead</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbbeneficence"</span>, <span class="st">"cwbintegrity"</span>, <span class="st">"cwbcompetence"</span>, <span class="st">"cwbvision"</span><span class="op">)</span></span>
-<span><span class="va">domain_healthyprac</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbrelgrowth"</span>, <span class="st">"cwbfairness"</span>, <span class="st">"cwbsustenance"</span>, <span class="st">"cwbachieve"</span><span class="op">)</span></span>
-<span><span class="va">domain_satcomm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbsatisf"</span>, <span class="st">"cwbvalue"</span>, <span class="st">"cwbbelonging"</span>, <span class="st">"cwbwelcome"</span><span class="op">)</span></span>
-<span><span class="va">domain_strongmiss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbpurpose"</span>, <span class="st">"cwbcontrib"</span>, <span class="st">"cwbinterconn"</span>, <span class="st">"cwbsynergy"</span><span class="op">)</span></span>
 <span><span class="va">mylist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>  <span class="va">domain_goodrel</span>,</span>
-<span>  <span class="va">domain_prolead</span>,</span>
-<span>  <span class="va">domain_healthyprac</span>,</span>
-<span>  <span class="va">domain_satcomm</span>,</span>
-<span>  <span class="va">domain_strongmiss</span></span>
-<span><span class="op">)</span></span>
+<span>     domain_goodrel <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbcloserel"</span>, <span class="st">"cwbrespect"</span>, <span class="st">"cwbtrust"</span>, <span class="st">"cwbmutuality"</span><span class="op">)</span>,</span>
+<span>     domain_prolead <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbbeneficence"</span>, <span class="st">"cwbintegrity"</span>, <span class="st">"cwbcompetence"</span>, <span class="st">"cwbvision"</span><span class="op">)</span>,</span>
+<span>     domain_healthyprac <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbrelgrowth"</span>, <span class="st">"cwbfairness"</span>, <span class="st">"cwbsustenance"</span>, <span class="st">"cwbachieve"</span><span class="op">)</span>,</span>
+<span>     domain_satcomm <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbsatisf"</span>, <span class="st">"cwbvalue"</span>, <span class="st">"cwbbelonging"</span>, <span class="st">"cwbwelcome"</span><span class="op">)</span>,</span>
+<span>     domain_strongmiss <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cwbpurpose"</span>, <span class="st">"cwbcontrib"</span>, <span class="st">"cwbinterconn"</span>, <span class="st">"cwbsynergy"</span><span class="op">)</span></span>
+<span>   <span class="op">)</span></span>
+<span>   </span>
+<span><span class="va">myvar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">mylist</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Generate ORC matrix</span></span>
+<span><span class="fu"><a href="reference/cor.orc.html">cor.orc</a></span><span class="op">(</span> <span class="va">SCWB</span><span class="op">[</span>,<span class="va">myvar</span><span class="op">]</span> <span class="op">)</span></span>
+<span><span class="co">#&gt;                cwbcloserel cwbrespect cwbtrust cwbmutuality cwbbeneficence</span></span>
+<span><span class="co">#&gt; cwbcloserel           1.00       0.35     0.34         0.22          -0.13</span></span>
+<span><span class="co">#&gt; cwbrespect            0.35       1.00     0.61         0.35          -0.23</span></span>
+<span><span class="co">#&gt; cwbtrust              0.34       0.61     1.00         0.48          -0.20</span></span>
+<span><span class="co">#&gt; cwbmutuality          0.22       0.35     0.48         1.00          -0.18</span></span>
+<span><span class="co">#&gt; cwbbeneficence       -0.13      -0.23    -0.20        -0.18           1.00</span></span>
+<span><span class="co">#&gt; cwbintegrity         -0.23      -0.19    -0.21        -0.13           0.55</span></span>
+<span><span class="co">#&gt; cwbcompetence        -0.22      -0.22    -0.27        -0.31           0.40</span></span>
+<span><span class="co">#&gt; cwbvision            -0.24      -0.26    -0.22        -0.18           0.32</span></span>
+<span><span class="co">#&gt; cwbrelgrowth         -0.06      -0.34    -0.23        -0.20           0.11</span></span>
+<span><span class="co">#&gt; cwbfairness          -0.24      -0.09    -0.07        -0.20           0.11</span></span>
+<span><span class="co">#&gt; cwbsustenance        -0.21      -0.23    -0.16        -0.21          -0.02</span></span>
+<span><span class="co">#&gt; cwbachieve           -0.25      -0.29    -0.19        -0.17           0.03</span></span>
+<span><span class="co">#&gt; cwbsatisf             0.10       0.13     0.26         0.16          -0.21</span></span>
+<span><span class="co">#&gt; cwbvalue              0.01      -0.02    -0.10        -0.03          -0.22</span></span>
+<span><span class="co">#&gt; cwbbelonging          0.03       0.10     0.02        -0.02          -0.15</span></span>
+<span><span class="co">#&gt; cwbwelcome            0.03       0.18     0.08        -0.06          -0.22</span></span>
+<span><span class="co">#&gt; cwbpurpose           -0.16      -0.02    -0.14        -0.12          -0.26</span></span>
+<span><span class="co">#&gt; cwbcontrib           -0.22      -0.22    -0.30        -0.15          -0.10</span></span>
+<span><span class="co">#&gt; cwbinterconn         -0.11      -0.22    -0.28        -0.12          -0.13</span></span>
+<span><span class="co">#&gt; cwbsynergy           -0.20      -0.34    -0.37        -0.18          -0.13</span></span>
+<span><span class="co">#&gt;                cwbintegrity cwbcompetence cwbvision cwbrelgrowth cwbfairness</span></span>
+<span><span class="co">#&gt; cwbcloserel           -0.23         -0.22    -0.237        -0.06      -0.241</span></span>
+<span><span class="co">#&gt; cwbrespect            -0.19         -0.22    -0.255        -0.34      -0.089</span></span>
+<span><span class="co">#&gt; cwbtrust              -0.21         -0.27    -0.217        -0.23      -0.067</span></span>
+<span><span class="co">#&gt; cwbmutuality          -0.13         -0.31    -0.175        -0.20      -0.200</span></span>
+<span><span class="co">#&gt; cwbbeneficence         0.55          0.40     0.325         0.11       0.115</span></span>
+<span><span class="co">#&gt; cwbintegrity           1.00          0.42     0.367        -0.04       0.075</span></span>
+<span><span class="co">#&gt; cwbcompetence          0.42          1.00     0.488        -0.01       0.025</span></span>
+<span><span class="co">#&gt; cwbvision              0.37          0.49     1.000         0.14       0.106</span></span>
+<span><span class="co">#&gt; cwbrelgrowth          -0.04         -0.01     0.138         1.00       0.208</span></span>
+<span><span class="co">#&gt; cwbfairness            0.08          0.03     0.106         0.21       1.000</span></span>
+<span><span class="co">#&gt; cwbsustenance         -0.02          0.07     0.001         0.14       0.246</span></span>
+<span><span class="co">#&gt; cwbachieve             0.07          0.11     0.117         0.15       0.218</span></span>
+<span><span class="co">#&gt; cwbsatisf             -0.20         -0.22    -0.217        -0.20      -0.054</span></span>
+<span><span class="co">#&gt; cwbvalue              -0.24         -0.17    -0.240        -0.17      -0.146</span></span>
+<span><span class="co">#&gt; cwbbelonging          -0.12         -0.10    -0.122        -0.15       0.003</span></span>
+<span><span class="co">#&gt; cwbwelcome            -0.18         -0.10    -0.201        -0.25      -0.103</span></span>
+<span><span class="co">#&gt; cwbpurpose            -0.11         -0.14    -0.205        -0.15      -0.150</span></span>
+<span><span class="co">#&gt; cwbcontrib            -0.06         -0.13    -0.166         0.04      -0.098</span></span>
+<span><span class="co">#&gt; cwbinterconn          -0.20         -0.11    -0.108         0.02      -0.156</span></span>
+<span><span class="co">#&gt; cwbsynergy            -0.16         -0.12    -0.090         0.08      -0.212</span></span>
+<span><span class="co">#&gt;                cwbsustenance cwbachieve cwbsatisf cwbvalue cwbbelonging</span></span>
+<span><span class="co">#&gt; cwbcloserel           -0.208      -0.25      0.10    0.011        0.034</span></span>
+<span><span class="co">#&gt; cwbrespect            -0.230      -0.29      0.13   -0.015        0.097</span></span>
+<span><span class="co">#&gt; cwbtrust              -0.165      -0.19      0.26   -0.096        0.021</span></span>
+<span><span class="co">#&gt; cwbmutuality          -0.209      -0.17      0.16   -0.034       -0.021</span></span>
+<span><span class="co">#&gt; cwbbeneficence        -0.022       0.03     -0.21   -0.221       -0.153</span></span>
+<span><span class="co">#&gt; cwbintegrity          -0.018       0.07     -0.20   -0.235       -0.117</span></span>
+<span><span class="co">#&gt; cwbcompetence          0.070       0.11     -0.22   -0.169       -0.096</span></span>
+<span><span class="co">#&gt; cwbvision              0.001       0.12     -0.22   -0.240       -0.122</span></span>
+<span><span class="co">#&gt; cwbrelgrowth           0.143       0.15     -0.20   -0.175       -0.152</span></span>
+<span><span class="co">#&gt; cwbfairness            0.246       0.22     -0.05   -0.146        0.003</span></span>
+<span><span class="co">#&gt; cwbsustenance          1.000       0.54     -0.04   -0.074       -0.225</span></span>
+<span><span class="co">#&gt; cwbachieve             0.537       1.00     -0.12   -0.125       -0.246</span></span>
+<span><span class="co">#&gt; cwbsatisf             -0.035      -0.12      1.00    0.297        0.079</span></span>
+<span><span class="co">#&gt; cwbvalue              -0.074      -0.13      0.30    1.000       -0.009</span></span>
+<span><span class="co">#&gt; cwbbelonging          -0.225      -0.25      0.08   -0.009        1.000</span></span>
+<span><span class="co">#&gt; cwbwelcome            -0.212      -0.23      0.18    0.077        0.410</span></span>
+<span><span class="co">#&gt; cwbpurpose            -0.091      -0.10      0.09    0.088        0.235</span></span>
+<span><span class="co">#&gt; cwbcontrib            -0.038       0.07     -0.11    0.073       -0.078</span></span>
+<span><span class="co">#&gt; cwbinterconn          -0.064      -0.10     -0.37   -0.066       -0.131</span></span>
+<span><span class="co">#&gt; cwbsynergy            -0.063      -0.03     -0.37   -0.001       -0.246</span></span>
+<span><span class="co">#&gt;                cwbwelcome cwbpurpose cwbcontrib cwbinterconn cwbsynergy</span></span>
+<span><span class="co">#&gt; cwbcloserel          0.03      -0.16      -0.22        -0.11     -0.197</span></span>
+<span><span class="co">#&gt; cwbrespect           0.18      -0.02      -0.22        -0.22     -0.341</span></span>
+<span><span class="co">#&gt; cwbtrust             0.08      -0.14      -0.30        -0.28     -0.366</span></span>
+<span><span class="co">#&gt; cwbmutuality        -0.06      -0.12      -0.15        -0.12     -0.179</span></span>
+<span><span class="co">#&gt; cwbbeneficence      -0.22      -0.26      -0.10        -0.13     -0.128</span></span>
+<span><span class="co">#&gt; cwbintegrity        -0.18      -0.11      -0.06        -0.20     -0.157</span></span>
+<span><span class="co">#&gt; cwbcompetence       -0.10      -0.14      -0.13        -0.11     -0.118</span></span>
+<span><span class="co">#&gt; cwbvision           -0.20      -0.21      -0.17        -0.11     -0.090</span></span>
+<span><span class="co">#&gt; cwbrelgrowth        -0.25      -0.15       0.04         0.02      0.078</span></span>
+<span><span class="co">#&gt; cwbfairness         -0.10      -0.15      -0.10        -0.16     -0.212</span></span>
+<span><span class="co">#&gt; cwbsustenance       -0.21      -0.09      -0.04        -0.06     -0.063</span></span>
+<span><span class="co">#&gt; cwbachieve          -0.23      -0.10       0.07        -0.10     -0.030</span></span>
+<span><span class="co">#&gt; cwbsatisf            0.18       0.09      -0.11        -0.37     -0.367</span></span>
+<span><span class="co">#&gt; cwbvalue             0.08       0.09       0.07        -0.07     -0.001</span></span>
+<span><span class="co">#&gt; cwbbelonging         0.41       0.24      -0.08        -0.13     -0.246</span></span>
+<span><span class="co">#&gt; cwbwelcome           1.00       0.36      -0.01        -0.24     -0.273</span></span>
+<span><span class="co">#&gt; cwbpurpose           0.36       1.00       0.13        -0.04     -0.035</span></span>
+<span><span class="co">#&gt; cwbcontrib          -0.01       0.13       1.00         0.14      0.250</span></span>
+<span><span class="co">#&gt; cwbinterconn        -0.24      -0.04       0.14         1.00      0.646</span></span>
+<span><span class="co">#&gt; cwbsynergy          -0.27      -0.04       0.25         0.65      1.000</span></span>
+<span></span>
+<span><span class="co"># Generate REC matrix</span></span>
+<span><span class="fu"><a href="reference/cor.rec.html">cor.rec</a></span><span class="op">(</span> <span class="va">SCWB</span><span class="op">[</span>,<span class="va">myvar</span><span class="op">]</span> <span class="op">)</span></span>
+<span><span class="co">#&gt;                cwbcloserel cwbrespect cwbtrust cwbmutuality cwbbeneficence</span></span>
+<span><span class="co">#&gt; cwbcloserel             NA       0.18    0.181        0.129         -0.034</span></span>
+<span><span class="co">#&gt; cwbrespect           0.181         NA    0.265        0.164         -0.069</span></span>
+<span><span class="co">#&gt; cwbtrust             0.181       0.27       NA        0.225         -0.061</span></span>
+<span><span class="co">#&gt; cwbmutuality         0.129       0.16    0.225           NA         -0.050</span></span>
+<span><span class="co">#&gt; cwbbeneficence      -0.034      -0.07   -0.061       -0.050             NA</span></span>
+<span><span class="co">#&gt; cwbintegrity        -0.076      -0.06   -0.068       -0.032          0.224</span></span>
+<span><span class="co">#&gt; cwbcompetence       -0.070      -0.07   -0.089       -0.104          0.162</span></span>
+<span><span class="co">#&gt; cwbvision           -0.081      -0.08   -0.068       -0.052          0.142</span></span>
+<span><span class="co">#&gt; cwbrelgrowth        -0.003      -0.11   -0.063       -0.060          0.064</span></span>
+<span><span class="co">#&gt; cwbfairness         -0.078      -0.02   -0.008       -0.059          0.055</span></span>
+<span><span class="co">#&gt; cwbsustenance       -0.067      -0.07   -0.044       -0.063          0.007</span></span>
+<span><span class="co">#&gt; cwbachieve          -0.083      -0.09   -0.055       -0.045          0.023</span></span>
+<span><span class="co">#&gt; cwbsatisf            0.075       0.07    0.128        0.088         -0.066</span></span>
+<span><span class="co">#&gt; cwbvalue             0.035       0.02   -0.015        0.011         -0.071</span></span>
+<span><span class="co">#&gt; cwbbelonging         0.037       0.05    0.027        0.012         -0.039</span></span>
+<span><span class="co">#&gt; cwbwelcome           0.041       0.09    0.052       -0.004         -0.066</span></span>
+<span><span class="co">#&gt; cwbpurpose          -0.045       0.01   -0.032       -0.027         -0.081</span></span>
+<span><span class="co">#&gt; cwbcontrib          -0.074      -0.06   -0.100       -0.041         -0.023</span></span>
+<span><span class="co">#&gt; cwbinterconn        -0.024      -0.08   -0.107       -0.029         -0.045</span></span>
+<span><span class="co">#&gt; cwbsynergy          -0.078      -0.14   -0.157       -0.058         -0.041</span></span>
+<span><span class="co">#&gt;                cwbintegrity cwbcompetence cwbvision cwbrelgrowth cwbfairness</span></span>
+<span><span class="co">#&gt; cwbcloserel          -0.076         -0.07     -0.08       -0.003      -0.078</span></span>
+<span><span class="co">#&gt; cwbrespect           -0.056         -0.07     -0.08       -0.107      -0.016</span></span>
+<span><span class="co">#&gt; cwbtrust             -0.068         -0.09     -0.07       -0.063      -0.008</span></span>
+<span><span class="co">#&gt; cwbmutuality         -0.032         -0.10     -0.05       -0.060      -0.059</span></span>
+<span><span class="co">#&gt; cwbbeneficence        0.224          0.16      0.14        0.064       0.055</span></span>
+<span><span class="co">#&gt; cwbintegrity             NA          0.17      0.16        0.005       0.040</span></span>
+<span><span class="co">#&gt; cwbcompetence         0.171            NA      0.20        0.016       0.021</span></span>
+<span><span class="co">#&gt; cwbvision             0.160          0.20        NA        0.077       0.054</span></span>
+<span><span class="co">#&gt; cwbrelgrowth          0.005          0.02      0.08           NA       0.101</span></span>
+<span><span class="co">#&gt; cwbfairness           0.040          0.02      0.05        0.101          NA</span></span>
+<span><span class="co">#&gt; cwbsustenance         0.007          0.04      0.02        0.075       0.103</span></span>
+<span><span class="co">#&gt; cwbachieve            0.034          0.05      0.06        0.075       0.086</span></span>
+<span><span class="co">#&gt; cwbsatisf            -0.064         -0.07     -0.07       -0.051      -0.005</span></span>
+<span><span class="co">#&gt; cwbvalue             -0.079         -0.05     -0.08       -0.055      -0.040</span></span>
+<span><span class="co">#&gt; cwbbelonging         -0.029         -0.02     -0.03       -0.035       0.015</span></span>
+<span><span class="co">#&gt; cwbwelcome           -0.055         -0.02     -0.06       -0.076      -0.023</span></span>
+<span><span class="co">#&gt; cwbpurpose           -0.027         -0.04     -0.06       -0.041      -0.039</span></span>
+<span><span class="co">#&gt; cwbcontrib           -0.009         -0.04     -0.05        0.029      -0.022</span></span>
+<span><span class="co">#&gt; cwbinterconn         -0.074         -0.03     -0.03        0.018      -0.055</span></span>
+<span><span class="co">#&gt; cwbsynergy           -0.048         -0.03     -0.02        0.039      -0.084</span></span>
+<span><span class="co">#&gt;                cwbsustenance cwbachieve cwbsatisf cwbvalue cwbbelonging</span></span>
+<span><span class="co">#&gt; cwbcloserel          -0.0666      -0.08     0.075    0.035         0.04</span></span>
+<span><span class="co">#&gt; cwbrespect           -0.0681      -0.09     0.071    0.019         0.05</span></span>
+<span><span class="co">#&gt; cwbtrust             -0.0442      -0.06     0.128   -0.015         0.03</span></span>
+<span><span class="co">#&gt; cwbmutuality         -0.0630      -0.05     0.088    0.011         0.01</span></span>
+<span><span class="co">#&gt; cwbbeneficence        0.0066       0.02    -0.066   -0.071        -0.04</span></span>
+<span><span class="co">#&gt; cwbintegrity          0.0074       0.03    -0.064   -0.079        -0.03</span></span>
+<span><span class="co">#&gt; cwbcompetence         0.0400       0.05    -0.072   -0.051        -0.02</span></span>
+<span><span class="co">#&gt; cwbvision             0.0153       0.06    -0.070   -0.083        -0.03</span></span>
+<span><span class="co">#&gt; cwbrelgrowth          0.0745       0.08    -0.051   -0.055        -0.03</span></span>
+<span><span class="co">#&gt; cwbfairness           0.1033       0.09    -0.005   -0.040         0.02</span></span>
+<span><span class="co">#&gt; cwbsustenance             NA       0.20     0.005   -0.012        -0.07</span></span>
+<span><span class="co">#&gt; cwbachieve            0.2036         NA    -0.030   -0.033        -0.07</span></span>
+<span><span class="co">#&gt; cwbsatisf             0.0051      -0.03        NA    0.151         0.05</span></span>
+<span><span class="co">#&gt; cwbvalue             -0.0118      -0.03     0.151       NA         0.02</span></span>
+<span><span class="co">#&gt; cwbbelonging         -0.0650      -0.07     0.047    0.017           NA</span></span>
+<span><span class="co">#&gt; cwbwelcome           -0.0630      -0.07     0.090    0.054         0.17</span></span>
+<span><span class="co">#&gt; cwbpurpose           -0.0183      -0.02     0.057    0.056         0.10</span></span>
+<span><span class="co">#&gt; cwbcontrib           -0.0008       0.04    -0.021    0.051        -0.01</span></span>
+<span><span class="co">#&gt; cwbinterconn         -0.0135      -0.03    -0.159   -0.005        -0.04</span></span>
+<span><span class="co">#&gt; cwbsynergy           -0.0117       0.01    -0.158    0.040        -0.10</span></span>
+<span><span class="co">#&gt;                cwbwelcome cwbpurpose cwbcontrib cwbinterconn cwbsynergy</span></span>
+<span><span class="co">#&gt; cwbcloserel         0.041     -0.045    -0.0740       -0.024      -0.08</span></span>
+<span><span class="co">#&gt; cwbrespect          0.089      0.012    -0.0631       -0.076      -0.14</span></span>
+<span><span class="co">#&gt; cwbtrust            0.052     -0.032    -0.1000       -0.107      -0.16</span></span>
+<span><span class="co">#&gt; cwbmutuality       -0.004     -0.027    -0.0413       -0.029      -0.06</span></span>
+<span><span class="co">#&gt; cwbbeneficence     -0.066     -0.081    -0.0230       -0.045      -0.04</span></span>
+<span><span class="co">#&gt; cwbintegrity       -0.055     -0.027    -0.0090       -0.074      -0.05</span></span>
+<span><span class="co">#&gt; cwbcompetence      -0.022     -0.036    -0.0358       -0.032      -0.03</span></span>
+<span><span class="co">#&gt; cwbvision          -0.062     -0.064    -0.0522       -0.031      -0.02</span></span>
+<span><span class="co">#&gt; cwbrelgrowth       -0.076     -0.041     0.0292        0.018       0.04</span></span>
+<span><span class="co">#&gt; cwbfairness        -0.023     -0.039    -0.0221       -0.055      -0.08</span></span>
+<span><span class="co">#&gt; cwbsustenance      -0.063     -0.018    -0.0008       -0.013      -0.01</span></span>
+<span><span class="co">#&gt; cwbachieve         -0.067     -0.021     0.0403       -0.030       0.01</span></span>
+<span><span class="co">#&gt; cwbsatisf           0.090      0.057    -0.0207       -0.159      -0.16</span></span>
+<span><span class="co">#&gt; cwbvalue            0.054      0.056     0.0508       -0.005       0.04</span></span>
+<span><span class="co">#&gt; cwbbelonging        0.166      0.103    -0.0113       -0.037      -0.10</span></span>
+<span><span class="co">#&gt; cwbwelcome             NA      0.154     0.0165       -0.090      -0.11</span></span>
+<span><span class="co">#&gt; cwbpurpose          0.154         NA     0.0676        0.001       0.01</span></span>
+<span><span class="co">#&gt; cwbcontrib          0.016      0.068         NA        0.092       0.17</span></span>
+<span><span class="co">#&gt; cwbinterconn       -0.090      0.001     0.0916           NA       0.54</span></span>
+<span><span class="co">#&gt; cwbsynergy         -0.110      0.011     0.1696        0.543         NA</span></span>
+<span></span>
+<span><span class="co"># Generate within-between mean REC</span></span>
+<span><span class="fu"><a href="reference/rec.avg.wb.domains.html">rec.avg.wb.domains</a></span><span class="op">(</span><span class="va">SCWB</span>, <span class="va">mylist</span><span class="op">)</span></span>
+<span><span class="co">#&gt;     Domain Avg_Rec_Within_Domain Avg_REC_Between_Domains</span></span>
+<span><span class="co">#&gt; 1 Domain 1                  0.19                   -0.04</span></span>
+<span><span class="co">#&gt; 2 Domain 2                  0.18                   -0.03</span></span>
+<span><span class="co">#&gt; 3 Domain 3                  0.11                   -0.02</span></span>
+<span><span class="co">#&gt; 4 Domain 4                  0.09                   -0.02</span></span>
+<span><span class="co">#&gt; 5 Domain 5                  0.15                   -0.03</span></span>
+<span></span>
+<span><span class="co"># Generate pattern matrix of REC of an item within domain</span></span>
 <span><span class="fu"><a href="reference/rec.pattern.matrix.html">rec.pattern.matrix</a></span><span class="op">(</span><span class="va">SCWB</span>, <span class="va">mylist</span><span class="op">)</span></span>
-<span><span class="co">#&gt;              Item     Domain1     Domain2     Domain3      Domain4</span></span>
-<span><span class="co">#&gt; 1     cwbcloserel  0.16350864 -0.06530359 -0.05772553  0.047124129</span></span>
-<span><span class="co">#&gt; 2      cwbrespect  0.20341777 -0.06832657 -0.06991176  0.057950739</span></span>
-<span><span class="co">#&gt; 3        cwbtrust  0.22372552 -0.07130038 -0.04274413  0.047865281</span></span>
-<span><span class="co">#&gt; 4    cwbmutuality  0.17258900 -0.05945567 -0.05670289  0.026732625</span></span>
-<span><span class="co">#&gt; 5  cwbbeneficence -0.05341869  0.17633337  0.03712734 -0.060675160</span></span>
-<span><span class="co">#&gt; 6    cwbintegrity -0.05785968  0.18528117  0.02152480 -0.056452884</span></span>
-<span><span class="co">#&gt; 7   cwbcompetence -0.08235693  0.17883536  0.03139963 -0.041153557</span></span>
-<span><span class="co">#&gt; 8       cwbvision -0.07075092  0.16842651  0.05037093 -0.061091257</span></span>
-<span><span class="co">#&gt; 9    cwbrelgrowth -0.05823066  0.04050846  0.08350449 -0.054257648</span></span>
-<span><span class="co">#&gt; 10    cwbfairness -0.04045646  0.04233389  0.09669485 -0.013165893</span></span>
-<span><span class="co">#&gt; 11  cwbsustenance -0.06047999  0.01734252  0.12713391 -0.033705653</span></span>
-<span><span class="co">#&gt; 12     cwbachieve -0.06791720  0.04023782  0.12149053 -0.050223390</span></span>
-<span><span class="co">#&gt; 13      cwbsatisf  0.09032956 -0.06816411 -0.02045509  0.095829392</span></span>
-<span><span class="co">#&gt; 14       cwbvalue  0.01251991 -0.07083475 -0.03511407  0.073925015</span></span>
-<span><span class="co">#&gt; 15   cwbbelonging  0.03250483 -0.02942976 -0.03862983  0.076485998</span></span>
-<span><span class="co">#&gt; 16     cwbwelcome  0.04431847 -0.05094424 -0.05715359  0.103403657</span></span>
-<span><span class="co">#&gt; 17     cwbpurpose -0.02315045 -0.05192892 -0.02970909  0.092440499</span></span>
-<span><span class="co">#&gt; 18     cwbcontrib -0.06956462 -0.03002393  0.01166753  0.008818949</span></span>
-<span><span class="co">#&gt; 19   cwbinterconn -0.05909613 -0.04530498 -0.02006557 -0.072725619</span></span>
-<span><span class="co">#&gt; 20     cwbsynergy -0.10818321 -0.03377517 -0.01127452 -0.081058059</span></span>
-<span><span class="co">#&gt;          Domain5</span></span>
-<span><span class="co">#&gt; 1  -0.0552519881</span></span>
-<span><span class="co">#&gt; 2  -0.0668988806</span></span>
-<span><span class="co">#&gt; 3  -0.0990423663</span></span>
-<span><span class="co">#&gt; 4  -0.0388011694</span></span>
-<span><span class="co">#&gt; 5  -0.0475080610</span></span>
-<span><span class="co">#&gt; 6  -0.0393667108</span></span>
-<span><span class="co">#&gt; 7  -0.0329072571</span></span>
-<span><span class="co">#&gt; 8  -0.0412509643</span></span>
-<span><span class="co">#&gt; 9   0.0112924011</span></span>
-<span><span class="co">#&gt; 10 -0.0498391659</span></span>
-<span><span class="co">#&gt; 11 -0.0110588242</span></span>
-<span><span class="co">#&gt; 12  0.0002239403</span></span>
-<span><span class="co">#&gt; 13 -0.0702504693</span></span>
-<span><span class="co">#&gt; 14  0.0355899295</span></span>
-<span><span class="co">#&gt; 15 -0.0105548333</span></span>
-<span><span class="co">#&gt; 16 -0.0073088567</span></span>
-<span><span class="co">#&gt; 17  0.0265347085</span></span>
-<span><span class="co">#&gt; 18  0.1095879704</span></span>
-<span><span class="co">#&gt; 19  0.2120181880</span></span>
-<span><span class="co">#&gt; 20  0.2413640001</span></span></code></pre></div>
+<span><span class="co">#&gt;              Item Domain1 Domain2 Domain3 Domain4 Domain5</span></span>
+<span><span class="co">#&gt; 1     cwbcloserel    0.16   -0.07   -0.06   0.047 -0.0553</span></span>
+<span><span class="co">#&gt; 2      cwbrespect    0.20   -0.07   -0.07   0.058 -0.0669</span></span>
+<span><span class="co">#&gt; 3        cwbtrust    0.22   -0.07   -0.04   0.048 -0.0990</span></span>
+<span><span class="co">#&gt; 4    cwbmutuality    0.17   -0.06   -0.06   0.027 -0.0388</span></span>
+<span><span class="co">#&gt; 5  cwbbeneficence   -0.05    0.18    0.04  -0.061 -0.0475</span></span>
+<span><span class="co">#&gt; 6    cwbintegrity   -0.06    0.19    0.02  -0.056 -0.0394</span></span>
+<span><span class="co">#&gt; 7   cwbcompetence   -0.08    0.18    0.03  -0.041 -0.0329</span></span>
+<span><span class="co">#&gt; 8       cwbvision   -0.07    0.17    0.05  -0.061 -0.0413</span></span>
+<span><span class="co">#&gt; 9    cwbrelgrowth   -0.06    0.04    0.08  -0.054  0.0113</span></span>
+<span><span class="co">#&gt; 10    cwbfairness   -0.04    0.04    0.10  -0.013 -0.0498</span></span>
+<span><span class="co">#&gt; 11  cwbsustenance   -0.06    0.02    0.13  -0.034 -0.0111</span></span>
+<span><span class="co">#&gt; 12     cwbachieve   -0.07    0.04    0.12  -0.050  0.0002</span></span>
+<span><span class="co">#&gt; 13      cwbsatisf    0.09   -0.07   -0.02   0.096 -0.0703</span></span>
+<span><span class="co">#&gt; 14       cwbvalue    0.01   -0.07   -0.04   0.074  0.0356</span></span>
+<span><span class="co">#&gt; 15   cwbbelonging    0.03   -0.03   -0.04   0.076 -0.0106</span></span>
+<span><span class="co">#&gt; 16     cwbwelcome    0.04   -0.05   -0.06   0.103 -0.0073</span></span>
+<span><span class="co">#&gt; 17     cwbpurpose   -0.02   -0.05   -0.03   0.092  0.0265</span></span>
+<span><span class="co">#&gt; 18     cwbcontrib   -0.07   -0.03    0.01   0.009  0.1096</span></span>
+<span><span class="co">#&gt; 19   cwbinterconn   -0.06   -0.05   -0.02  -0.073  0.2120</span></span>
+<span><span class="co">#&gt; 20     cwbsynergy   -0.11   -0.03   -0.01  -0.081  0.2414</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
