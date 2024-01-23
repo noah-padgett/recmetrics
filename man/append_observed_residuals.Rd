@@ -4,7 +4,7 @@
 \alias{append_observed_residuals}
 \title{Append Observed Correlations to Data}
 \usage{
-append_observed_residuals(data, na.rm = T)
+append_observed_residuals(data, na.rm = TRUE)
 }
 \arguments{
 \item{data}{A data.frame or tibble}
@@ -19,9 +19,7 @@ Compute observed residuals for each variables in data and appends these newly
 created variables to the original dataset.
 }
 \examples{
-{
   # Use the SCWB data example
   data(SCWB)
   append_observed_residuals(SCWB[, 1:20])
-}
 }

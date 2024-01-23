@@ -6,7 +6,7 @@
 \alias{recmetrics-package}
 \title{recmetrics: Psychometric Evaluation Using Relative Excess Correlations}
 \description{
-recmetrics uses modern results of psychometric theory to provide users with a way of evaluating the internal structure of a set of items guided by theory. A goal similar to confirmatory factor analysis, but recmetrics uses novel methods that do not rely on assumptions of latent variables or latent variable structures.
+Modern results of psychometric theory are implementedto provide users with a way of evaluating the internal structure of a set of items guided by theory. These methods are discussed in detail in VanderWeele and Padgett <arxiv:> The positive deviations of the REC matrix entries from zero help identify clusters of indicators that are more strongly related to one another, providing insights somewhat analogous to factor analysis, but without the need for rotations or decisions concerning the number of factors. A goal similar to confirmatory factor analysis, but 'recmetrics' uses novel methods that do not rely on assumptions of latent variables or latent variable structures.
 }
 \seealso{
 Useful links:

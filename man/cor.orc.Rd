@@ -22,9 +22,7 @@ for variables supplied data.
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \examples{
-{
   # Use the SCWB data example
   data(SCWB)
   cor.orc(SCWB[, 1:20])
-}
 }

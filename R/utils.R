@@ -5,12 +5,11 @@
 #' @param x A correlations
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric vector of correlation means.
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
 #'   data(SCWB)
 #'   mycor <- cor(SCWB)
 #'   cor.rowMeans(mycor)
-#' }
 #' @export
 cor.rowMeans <- function(x, na.rm=TRUE) {
   diag(x) <- NA
@@ -27,14 +26,13 @@ cor.rowMeans <- function(x, na.rm=TRUE) {
 #' @param data A data.frame or tibble
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
 #'   data(SCWB)
 #'   append_observed_residuals(SCWB[, 1:20])
-#' }
 #' @import dplyr tidyselect
 #' @export
-append_observed_residuals <- function(data, na.rm = T) {
+append_observed_residuals <- function(data, na.rm = TRUE) {
   data %>%
     mutate(
       x.mean = 0,

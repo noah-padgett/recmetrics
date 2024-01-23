@@ -8,11 +8,10 @@
 #' @param data A data.frame or tibble
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
 #'   data(SCWB)
 #'   cov.orc(SCWB[, 1:20])
-#' }
 #' @export
 cov.orc <- function(data, na.rm = TRUE) {
   temp.data <- data
@@ -39,11 +38,10 @@ cov.orc <- function(data, na.rm = TRUE) {
 #' @param data A data.frame or tibble
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A numeric matrix of correlations among variable residuals.
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
 #'   data(SCWB)
 #'   cov.rec(SCWB[, 1:20])
-#' }
 #' @export
 cov.rec <- function(data, na.rm = TRUE) {
   temp.data <- data

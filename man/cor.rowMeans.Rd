@@ -18,10 +18,8 @@ A numeric vector of correlation means.
 A wrapper for computing the mean of the rows of a correlation matrix.
 }
 \examples{
-{
   # Use the SCWB data example
   data(SCWB)
   mycor <- cor(SCWB)
   cor.rowMeans(mycor)
-}
 }

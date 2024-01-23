@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+options(digits=1, scipen=5)
 ```
 
 # recmetrics
@@ -21,6 +22,10 @@ knitr::opts_chunk$set(
 The goal of recmetrics is to provide users with the ability to conduct psychometric evaluation without relying on assumptions of the latent variable structure following the work of VanderWeele and Padgett (preprint).
 
 ## Installation
+
+``` r
+install.packages("recmetrics")
+```
 
 You can install the development version of recmetrics from [GitHub](https://github.com/) with:
 
@@ -38,18 +43,26 @@ Using the *a prior* groups of items on each domain, we can construct a pattern m
 library(recmetrics)
 
 # Use the SCWB data example
-domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
-domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
-domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
-domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
-domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 mylist <- list(
-  domain_goodrel,
-  domain_prolead,
-  domain_healthyprac,
-  domain_satcomm,
-  domain_strongmiss
-)
+     domain_goodrel = c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality"),
+     domain_prolead = c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision"),
+     domain_healthyprac = c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve"),
+     domain_satcomm = c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome"),
+     domain_strongmiss = c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
+   )
+   
+myvar <- c(unlist(mylist))
+
+# Generate ORC matrix
+cor.orc( SCWB[,myvar] )
+
+# Generate REC matrix
+cor.rec( SCWB[,myvar] )
+
+# Generate within-between mean REC
+rec.avg.wb.domains(SCWB, mylist)
+
+# Generate pattern matrix of REC of an item within domain
 rec.pattern.matrix(SCWB, mylist)
 
 ```

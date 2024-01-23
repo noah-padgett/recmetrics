@@ -31,20 +31,13 @@ domains as a whole
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \examples{
-{
   # Use the SCWB data example
-  domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
-  domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
-  domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
-  domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
-  domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
   mylist <- list(
-    domain_goodrel,
-    domain_prolead,
-    domain_healthyprac,
-    domain_satcomm,
-    domain_strongmiss
+    domain_goodrel = c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality"),
+    domain_prolead = c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision"),
+    domain_healthyprac = c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve"),
+    domain_satcomm = c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome"),
+    domain_strongmiss = c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
   )
   rec.coherence(SCWB, mylist)
-}
 }

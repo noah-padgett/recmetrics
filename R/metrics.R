@@ -46,22 +46,16 @@ rec.average <- function(data, na.rm = TRUE) {
 #'  output
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
-#'   domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
-#'   domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
-#'   domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
-#'   domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
-#'   domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   mylist <- list(
-#'     domain_goodrel,
-#'     domain_prolead,
-#'     domain_healthyprac,
-#'     domain_satcomm,
-#'     domain_strongmiss
+#'     domain_goodrel = c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality"),
+#'     domain_prolead = c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision"),
+#'     domain_healthyprac = c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve"),
+#'     domain_satcomm = c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome"),
+#'     domain_strongmiss = c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   )
 #'   rec.avg.wb.domains(SCWB, mylist)
-#' }
 #' @export
 rec.avg.wb.domains <-
   function(data,
@@ -126,22 +120,16 @@ rec.avg.wb.domains <-
 #'  output
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
-#'   domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
-#'   domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
-#'   domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
-#'   domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
-#'   domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   mylist <- list(
-#'     domain_goodrel,
-#'     domain_prolead,
-#'     domain_healthyprac,
-#'     domain_satcomm,
-#'     domain_strongmiss
+#'     domain_goodrel = c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality"),
+#'     domain_prolead = c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision"),
+#'     domain_healthyprac = c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve"),
+#'     domain_satcomm = c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome"),
+#'     domain_strongmiss = c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   )
 #'   rec.coherence(SCWB, mylist)
-#' }
 #' @export
 rec.coherence <-
   function(data,
@@ -207,22 +195,16 @@ rec.coherence <-
 #'   attached to output
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
-#' @examples {
+#' @examples
 #'   # Use the SCWB data example
-#'   domain_goodrel <- c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality")
-#'   domain_prolead <- c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision")
-#'   domain_healthyprac <- c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve")
-#'   domain_satcomm <- c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome")
-#'   domain_strongmiss <- c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   mylist <- list(
-#'     domain_goodrel,
-#'     domain_prolead,
-#'     domain_healthyprac,
-#'     domain_satcomm,
-#'     domain_strongmiss
+#'     domain_goodrel = c("cwbcloserel", "cwbrespect", "cwbtrust", "cwbmutuality"),
+#'     domain_prolead = c("cwbbeneficence", "cwbintegrity", "cwbcompetence", "cwbvision"),
+#'     domain_healthyprac = c("cwbrelgrowth", "cwbfairness", "cwbsustenance", "cwbachieve"),
+#'     domain_satcomm = c("cwbsatisf", "cwbvalue", "cwbbelonging", "cwbwelcome"),
+#'     domain_strongmiss = c("cwbpurpose", "cwbcontrib", "cwbinterconn", "cwbsynergy")
 #'   )
 #'   rec.pattern.matrix(SCWB, mylist)
-#' }
 #' @export
 rec.pattern.matrix <-
   function(data,
