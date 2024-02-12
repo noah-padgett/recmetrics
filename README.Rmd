@@ -19,7 +19,9 @@ options(digits=1, scipen=5)
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of recmetrics is to provide users with the ability to conduct psychometric evaluation without relying on assumptions of the latent variable structure following the work of VanderWeele and Padgett (preprint).
+The goal of recmetrics is to provide users with the ability to conduct psychometric evaluation without relying on assumptions of the latent variable structure following the work of VanderWeele and Padgett (2024).
+
+VanderWeele, T. J., \& Padgett, R. (2024). Novel Psychometric Indicator Assessments: The Relative Excess Correlation and Associated Matrices. Preprint PsyArXiv: https://doi.org/10.31234/osf.io/rnbk5
 
 ## Installation
 
