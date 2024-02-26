@@ -42,7 +42,7 @@ rec.average <- function(data, na.rm = TRUE) {
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the
 #'  columns for each domain (required)
-#' @param domainnames A character vector suppling updated names to be attached to
+#' @param domainnames A character vector supplying updated names to be attached to
 #'  output
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
@@ -116,7 +116,7 @@ rec.avg.wb.domains <-
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the
 #'  columns for each domain (required)
-#' @param domainnames A character vector suppling updated names to be attached to
+#' @param domainnames A character vector supplying updated names to be attached to
 #'  output
 #' @param na.rm logical (defaults to TRUE)
 #' @returns A single numerical value
@@ -189,7 +189,7 @@ rec.coherence <-
 #' @param data A data.frame or tibble  (required)
 #' @param domainlist A list of character vectors or numeric vectors denoting the
 #'   columns for each domain (required)
-#' @param domainnames A character vector suppling updated names to be attached
+#' @param domainnames A character vector supplying updated names to be attached
 #'   to output
 #' @param labels A character vector supplying updated variable names to be
 #'   attached to output

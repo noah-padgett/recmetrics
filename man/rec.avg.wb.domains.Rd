@@ -12,7 +12,7 @@ rec.avg.wb.domains(data, domainlist = NULL, domainnames = NULL, na.rm = TRUE)
 \item{domainlist}{A list of character vectors or numeric vectors denoting the
 columns for each domain (required)}
 
-\item{domainnames}{A character vector suppling updated names to be attached to
+\item{domainnames}{A character vector supplying updated names to be attached to
 output}
 
 \item{na.rm}{logical (defaults to TRUE)}

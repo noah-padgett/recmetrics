@@ -18,7 +18,7 @@ rec.pattern.matrix(
 \item{domainlist}{A list of character vectors or numeric vectors denoting the
 columns for each domain (required)}
 
-\item{domainnames}{A character vector suppling updated names to be attached
+\item{domainnames}{A character vector supplying updated names to be attached
 to output}
 
 \item{labels}{A character vector supplying updated variable names to be
