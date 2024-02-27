@@ -20,4 +20,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.0
-URL: https://noah-padgett.github.io/recmetrics/
+URL: https://noah-padgett.github.io/recmetrics/, https://github.com/noah-padgett/recmetrics
+BugReports: https://github.com/noah-padgett/recmetrics/issues
